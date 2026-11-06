@@ -5,39 +5,40 @@ import { FlyingButterflies } from "./FlyingButterflies";
 
 const INVITATION = {
   couple: {
-    bride: "Harindya",
-    groom: "Akash",
-    brideFull: "Harindya Ekanayake",
-    groomFull: "Akash Bandara",
+    bride: "Nuwanthi",
+    groom: "Dhanuka",
+  },
+  parents: {
+    bride: "SHIROMI & RAVI",
+    groom: "PADMINI & ANNADA",
   },
   date: {
-    displayNumeric: "23 . 01 . 2027",
-    displayLong: "January 23",
-    countdownTarget: "January 23, 2027 09:00:00",
+    displayNumeric: "19 . 12 . 2026",
+    displayLong: "December 19",
+    countdownTarget: "December 19, 2026 17:30:00",
   },
   time: {
-    ceremony: "Morning to evening",
-    reception: "Lunch",
+    ceremony: "5:30 PM",
   },
   venue: {
-    name: "Royal Rest House, Peradeniya",
-    city: "Kandy",
-    mapQuery: "Royal Rest House, Peradeniya",
-    googleMapsLink: "https://maps.google.com/?q=Royal+Rest+House,+Peradeniya",
+    name: "Laverno Garden",
+    hall: "Indoor",
+    city: "Kosgama",
+    address: "Highlevel Road, Kosgama 10730, Sri Lanka",
+    mapQuery: "Laverno Garden, Highlevel Road, Kosgama 10730, Sri Lanka",
+    googleMapsLink: "https://maps.google.com/?q=Laverno+Garden,+Highlevel+Road,+Kosgama+10730,+Sri+Lanka",
   },
-  rsvpContacts: [
-    "Akash - 071 639 2469",
-    "Pawani - 0765584662",
-  ],
-} as const;
+  rsvpContacts: [] as string[],
+};
 
-const backgroundMusic = "/Nim Him Sewwa  Romantic Live Violin & Piano Cover  Shahen Thilakaratne.mp3";
+const backgroundMusic = encodeURI("/George Benson - Nothing's Gonna Change My Love For You [Lyrics].mp3");
 const googleScriptUrl = "https://script.google.com/macros/s/AKfycbwcajHelaqARkvE1KU8wHoPGpaXiI5zFqBHJWz694WKc3B_LJs68Wr8HkgCMBOufIQ/exec";
 
 const publicImagePath = (fileName: string) => `/images/${fileName.replaceAll(" ", "%20")}`;
 
 const HERO_BACKGROUND_IMAGE = publicImagePath("1 (1).jpg");
 const FEATURED_COUPLE_IMAGE = publicImagePath("1 (7).jpg");
+const GALLERY_IMAGES = ["couple-1.jpg", "couple-2.jpg", "couple-3.jpg"].map(publicImagePath);
 
 function FloatingPetals() {
   const [isLowPowerMode, setIsLowPowerMode] = useState(false);
@@ -593,7 +594,7 @@ export default function HomecomingInvitation() {
                     <div className="absolute inset-1 border border-[#D4AF37]/20 pointer-events-none" style={{ clipPath: 'polygon(12px 0, calc(100% - 12px) 0, 100% 12px, 100% calc(100% - 12px), calc(100% - 12px) 100%, 12px 100%, 0 calc(100% - 12px), 0 12px)' }}></div>
                     
                     <div className="py-6 px-4 flex flex-col items-center justify-center text-[#FFFFFF] font-cinzel text-xs md:text-sm tracking-[0.1em] relative z-10 font-bold leading-relaxed">
-                      <span>MR. & MRS. EKANAYAKE</span>
+                      <span>{INVITATION.parents.bride}</span>
                     </div>
                   </div>
 
@@ -632,7 +633,7 @@ export default function HomecomingInvitation() {
                     <div className="absolute inset-1 border border-[#D4AF37]/20 pointer-events-none" style={{ clipPath: 'polygon(12px 0, calc(100% - 12px) 0, 100% 12px, 100% calc(100% - 12px), calc(100% - 12px) 100%, 12px 100%, 0 calc(100% - 12px), 0 12px)' }}></div>
                     
                     <div className="py-5 px-4 flex flex-col items-center justify-center text-[#FFFFFF] font-cinzel text-xs md:text-sm tracking-[0.1em] relative z-10 font-bold leading-relaxed">
-                      <span>MR. & MRS. BANDARA</span>
+                      <span>{INVITATION.parents.groom}</span>
                     </div>
                   </div>
 
@@ -658,9 +659,9 @@ export default function HomecomingInvitation() {
 
                   {/* Couple Names Inline */}
                   <div className="flex items-center justify-center gap-6 mb-6">
-                    <span className="font-cinzel text-xl md:text-3xl text-[#FFFFFF] tracking-[0.2em] font-bold">HARINDYA</span>
+                    <span className="font-cinzel text-xl md:text-3xl text-[#FFFFFF] tracking-[0.2em] font-bold">{INVITATION.couple.bride.toUpperCase()}</span>
                     <span className="font-playball text-4xl md:text-6xl text-[#D4AF37] mt-1">&</span>
-                    <span className="font-cinzel text-xl md:text-3xl text-[#FFFFFF] tracking-[0.2em] font-bold">AKASH</span>
+                    <span className="font-cinzel text-xl md:text-3xl text-[#FFFFFF] tracking-[0.2em] font-bold">{INVITATION.couple.groom.toUpperCase()}</span>
                   </div>
 
                   {/* Bottom Ornament */}
@@ -749,71 +750,16 @@ export default function HomecomingInvitation() {
                   <div className="absolute inset-5 border border-[#D4AF37]/20 rounded-[1.2rem] pointer-events-none" />
 
                   <div className="relative space-y-8 md:space-y-16 z-10 pt-4 pb-4 px-2 md:px-6">
-                    {/* Vertical connecting line */}
-                    <div className="absolute left-[36px] md:left-[56px] top-10 bottom-10 w-[1px] bg-gradient-to-b from-[#D4AF37] via-[#D4AF37]/50 to-[#D4AF37]" />
 
-                    {/* Node 1: Start */}
+                    {/* Node 1: Homecoming */}
                     <div className="relative flex items-center gap-6 md:gap-8">
                       <div className="w-14 h-14 md:w-16 md:h-16 rounded-full border border-[#D4AF37] bg-[#1A1A1A] flex items-center justify-center shrink-0 z-10 shadow-[0_0_20px_rgba(212,175,55,0.4)] overflow-hidden">
-                        <Sparkles className="w-6 h-6 md:w-8 md:h-8 text-[#D4AF37]" strokeWidth={1.5} />
+                        <Heart className="w-6 h-6 md:w-8 md:h-8 text-[#D4AF37]" strokeWidth={1.5} />
                       </div>
                       <div className="flex-1">
-                        <div className="text-[10px] md:text-[11px] uppercase tracking-[0.4em] font-bold text-[#D4AF37] font-cinzel mb-2">Start</div>
-                        <div className="text-xl md:text-3xl text-[#E0E0E0] font-cinzel font-light leading-tight">10:10 AM</div>
-                      </div>
-                    </div>
-
-                    {/* Horizontal Divider Line with Ornament (Node 1-2) */}
-                    <div className="absolute top-[72px] md:top-[100px] left-[70px] md:left-[100px] right-0 h-px bg-gradient-to-r from-transparent via-[#D4AF37]/40 to-transparent flex items-center justify-center">
-                       <div className="w-3 h-3 text-[#D4AF37]">
-                          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L14 10L22 12L14 14L12 22L10 14L2 12L10 10Z"/></svg>
-                       </div>
-                    </div>
-
-                    {/* Node 2: Welcome */}
-                    <div className="relative flex items-center gap-6 md:gap-8">
-                      <div className="w-14 h-14 md:w-16 md:h-16 rounded-full border border-[#D4AF37] bg-[#1A1A1A] flex items-center justify-center shrink-0 z-10 shadow-[0_0_20px_rgba(212,175,55,0.4)] overflow-hidden">
-                        <Flower2 className="w-6 h-6 md:w-8 md:h-8 text-[#D4AF37]" strokeWidth={1.5} />
-                      </div>
-                      <div className="flex-1">
-                        <div className="text-[10px] md:text-[11px] uppercase tracking-[0.4em] font-bold text-[#D4AF37] font-cinzel mb-2">Welcome</div>
-                        <div className="text-xl md:text-3xl text-[#E0E0E0] font-cinzel font-light leading-tight">10:20 AM</div>
-                      </div>
-                    </div>
-
-                    {/* Horizontal Divider Line with Ornament (Node 2-3) */}
-                    <div className="absolute top-[160px] md:top-[235px] left-[70px] md:left-[100px] right-0 h-px bg-gradient-to-r from-transparent via-[#D4AF37]/40 to-transparent flex items-center justify-center">
-                       <div className="w-3 h-3 text-[#D4AF37]">
-                          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L14 10L22 12L14 14L12 22L10 14L2 12L10 10Z"/></svg>
-                       </div>
-                    </div>
-
-                    {/* Node 3: Lunch */}
-                    <div className="relative flex items-center gap-6 md:gap-8">
-                      <div className="w-14 h-14 md:w-16 md:h-16 rounded-full border border-[#D4AF37] bg-[#1A1A1A] flex items-center justify-center shrink-0 z-10 shadow-[0_0_20px_rgba(212,175,55,0.4)] overflow-hidden">
-                        <UtensilsCrossed className="w-6 h-6 md:w-8 md:h-8 text-[#D4AF37]" strokeWidth={1.5} />
-                      </div>
-                      <div className="flex-1">
-                        <div className="text-[10px] md:text-[11px] uppercase tracking-[0.4em] font-bold text-[#D4AF37] font-cinzel mb-2">Lunch</div>
-                        <div className="text-xl md:text-3xl text-[#E0E0E0] font-cinzel font-light leading-tight">12:45 PM</div>
-                      </div>
-                    </div>
-
-                    {/* Horizontal Divider Line with Ornament (Node 3-4) */}
-                    <div className="absolute top-[248px] md:top-[370px] left-[70px] md:left-[100px] right-0 h-px bg-gradient-to-r from-transparent via-[#D4AF37]/40 to-transparent flex items-center justify-center">
-                       <div className="w-3 h-3 text-[#D4AF37]">
-                          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L14 10L22 12L14 14L12 22L10 14L2 12L10 10Z"/></svg>
-                       </div>
-                    </div>
-
-                    {/* Node 4: Dancing Floor */}
-                    <div className="relative flex items-center gap-6 md:gap-8">
-                      <div className="w-14 h-14 md:w-16 md:h-16 rounded-full border border-[#D4AF37] bg-[#1A1A1A] flex items-center justify-center shrink-0 z-10 shadow-[0_0_20px_rgba(212,175,55,0.4)] overflow-hidden">
-                        <Music className="w-6 h-6 md:w-8 md:h-8 text-[#D4AF37]" strokeWidth={1.5} />
-                      </div>
-                      <div className="flex-1">
-                        <div className="text-[10px] md:text-[11px] uppercase tracking-[0.4em] font-bold text-[#D4AF37] font-cinzel mb-2">Dancing Floor</div>
-                        <div className="text-xl md:text-3xl text-[#E0E0E0] font-cinzel font-light leading-tight">1:00 PM</div>
+                        <div className="text-[10px] md:text-[11px] uppercase tracking-[0.4em] font-bold text-[#D4AF37] font-cinzel mb-2">Homecoming</div>
+                        <div className="text-xl md:text-3xl text-[#E0E0E0] font-cinzel font-light leading-tight">{INVITATION.time.ceremony}</div>
+                        <div className="text-[9px] md:text-[11px] text-[#E0E0E0]/70 font-cinzel tracking-[0.15em] uppercase mt-1">{INVITATION.venue.hall} · {INVITATION.venue.name}, {INVITATION.venue.city}</div>
                       </div>
                     </div>
                   </div>
@@ -904,6 +850,47 @@ export default function HomecomingInvitation() {
             </section>
 
 
+            {/* Gallery Section */}
+            <section className="relative py-20 md:py-32 overflow-hidden flex flex-col items-center w-full bg-[#0A0A0A] bg-cover bg-center" style={{ backgroundImage: 'url("/bg.png")' }}>
+              <div className="container mx-auto px-6 max-w-5xl relative z-10 text-center">
+                <motion.div
+                  initial={{ opacity: 0, y: 18 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  className="flex flex-col items-center mb-12 md:mb-16"
+                >
+                  <p className="font-cinzel text-[#D4AF37] font-bold uppercase tracking-[0.6em] text-[10px] md:text-xs">
+                    Our Moments
+                  </p>
+                  <h2 className="font-playball text-6xl md:text-8xl text-[#D4AF37] leading-none mt-4 drop-shadow-[0_0_15px_rgba(212,175,55,0.2)]">
+                    Gallery
+                  </h2>
+                  <div className="w-full max-w-[200px] mx-auto h-px bg-gradient-to-r from-transparent via-[#D4AF37]/60 to-transparent mt-6" />
+                </motion.div>
+
+                <div className="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-6">
+                  {GALLERY_IMAGES.map((src, i) => (
+                    <motion.div
+                      key={src}
+                      initial={{ opacity: 0, y: 30 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      viewport={{ once: true }}
+                      transition={{ duration: 0.8, delay: i * 0.15 }}
+                      className={`relative overflow-hidden rounded-2xl border border-[#D4AF37]/40 shadow-[0_0_30px_rgba(212,175,55,0.15)] group ${i === 0 ? "col-span-2 md:col-span-1 aspect-[4/5] md:aspect-[2/3]" : "aspect-[2/3]"}`}
+                    >
+                      <img
+                        src={src}
+                        alt={`${INVITATION.couple.bride} & ${INVITATION.couple.groom} ${i + 1}`}
+                        loading="lazy"
+                        className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
+                      />
+                      <div className="absolute inset-2 border border-[#D4AF37]/30 rounded-xl pointer-events-none" />
+                    </motion.div>
+                  ))}
+                </div>
+              </div>
+            </section>
+
             {/* Venue Location Section */}
             <section className="relative py-28 md:py-48 overflow-hidden bg-[#111111] bg-cover bg-center" style={{ backgroundImage: 'url("/bg.png")' }}>
 
@@ -971,7 +958,10 @@ export default function HomecomingInvitation() {
                             <div className="space-y-3">
                               <h4 className="text-[#E0E0E0] font-bold text-[10px] uppercase tracking-[0.5em] font-cinzel">The Destination</h4>
                               <p className="text-xl md:text-2xl text-[#E0E0E0] font-cinzel leading-relaxed tracking-wide font-bold">
-                                {INVITATION.venue.name}, {INVITATION.venue.city}
+                                {INVITATION.venue.name} ({INVITATION.venue.hall})
+                              </p>
+                              <p className="text-xs md:text-sm text-[#E0E0E0]/80 font-cinzel tracking-wide">
+                                {INVITATION.venue.address}
                               </p>
                             </div>
                           </div>
@@ -983,7 +973,7 @@ export default function HomecomingInvitation() {
                             <div className="space-y-1">
                               <h4 className="text-[#E0E0E0] font-bold text-[10px] uppercase tracking-[0.5em] font-cinzel">The Homecoming</h4>
                               <p className="text-xl md:text-2xl text-[#E0E0E0] font-cinzel leading-relaxed tracking-wide font-bold">
-                                {INVITATION.time.ceremony}
+                                {INVITATION.date.displayLong}, 2026 · {INVITATION.time.ceremony}
                               </p>
                             </div>
                           </div>
@@ -1207,7 +1197,7 @@ export default function HomecomingInvitation() {
                 </motion.div>
 
                 {/* Info info mirroring the clean aesthetic */}
-                <div className="mt-32 flex flex-col items-center gap-6 text-center w-full max-w-xl">
+                {INVITATION.rsvpContacts.length > 0 && <div className="mt-32 flex flex-col items-center gap-6 text-center w-full max-w-xl">
                   <div className="h-px w-24 bg-[#D4AF37]/50" />
                   <p className="text-[#D4AF37] text-[10px] tracking-[0.4em] font-bold uppercase mt-2">RSVP Contacts</p>
                   <div className="flex flex-wrap justify-center gap-x-10 gap-y-4 text-[#E0E0E0] text-[10px] md:text-sm tracking-widest font-normal opacity-80 decoration-[#D4AF37]/50 underline-offset-4">
@@ -1215,7 +1205,7 @@ export default function HomecomingInvitation() {
                       <p key={line}>{line}</p>
                     ))}
                   </div>
-                </div>
+                </div>}
               </div>
             </section>
 
