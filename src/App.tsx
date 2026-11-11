@@ -318,7 +318,7 @@ export default function HomecomingInvitation() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0, transition: { duration: 1.2 } }}
-            className="fixed inset-0 z-[100] bg-[#2A1810] flex items-center justify-center overflow-hidden"
+            className="fixed inset-0 z-[100] bg-[#8B0000] flex items-center justify-center overflow-hidden"
           >
             <video
               ref={introVideoRef}
@@ -333,7 +333,7 @@ export default function HomecomingInvitation() {
             />
 
             {!hasStarted && (
-              <div className="absolute inset-0 flex flex-col items-center justify-center z-[120] bg-[#2A1810]/40 backdrop-blur-[2px]">
+              <div className="absolute inset-0 flex flex-col items-center justify-center z-[120] bg-[#8B0000]/40 backdrop-blur-[2px]">
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
@@ -347,7 +347,7 @@ export default function HomecomingInvitation() {
                       transition={{ duration: 1, delay: 1 }}
                       className="mb-8 flex flex-col items-center"
                     >
-                      <p className="font-playball text-4xl md:text-5xl text-[#8B0000] drop-shadow-md mb-2">Dear {guestPrefix} {guestName}</p>
+                      <p className="font-playball text-4xl md:text-5xl text-[#D4AF37] drop-shadow-md mb-2">Dear {guestPrefix} {guestName}</p>
                       <p className="font-cinzel text-xs md:text-sm text-white/80 tracking-[0.2em] uppercase mt-2 drop-shadow-sm">We cordially invite you to</p>
                     </motion.div>
                   )}
@@ -429,10 +429,10 @@ export default function HomecomingInvitation() {
             <section className="relative min-h-[100dvh] w-full flex flex-col items-center justify-center overflow-hidden bg-[#0A0A0A]">
               
               {/* Background Image - used for both mobile and desktop */}
-              <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: 'url("/ChatGPT Image Jul 30, 2026, 03_06_30 AM.png")' }} />
+              <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: `url("${GALLERY_IMAGES[0]}")` }} />
               
               {/* Overlay for better text readability */}
-              <div className="absolute inset-0 bg-[#0A0A0A]/20 pointer-events-none" />
+              <div className="absolute inset-0 bg-[#0A0A0A]/40 pointer-events-none" />
 
               {/* Content Container */}
               <div className="relative z-10 w-full max-w-lg px-6 py-12 flex flex-col items-center text-center">
@@ -455,7 +455,7 @@ export default function HomecomingInvitation() {
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   transition={{ delay: 0.3, duration: 1 }}
-                  className="mt-3 text-[11px] md:text-sm uppercase tracking-[0.25em] text-[#FFFFFF] font-cinzel font-bold"
+                  className="mt-3 text-[11px] md:text-sm uppercase tracking-[0.25em] text-[#E3262F] [text-shadow:0_1px_6px_rgba(0,0,0,0.7)] font-cinzel font-bold"
                 >
                   Homecoming Ceremony
                 </motion.p>
@@ -481,13 +481,13 @@ export default function HomecomingInvitation() {
                   transition={{ delay: 0.6, duration: 1.2 }}
                   className="flex flex-col items-center"
                 >
-                  <h1 className="font-playball text-[5.5rem] md:text-9xl text-[#FFFFFF] leading-none drop-shadow-sm">
+                  <h1 className="font-playball text-[5.5rem] md:text-9xl text-[#E3262F] [text-shadow:0_2px_12px_rgba(0,0,0,0.6)] leading-none drop-shadow-sm">
                     {INVITATION.couple.bride}
                   </h1>
-                  <span className="font-playball text-4xl md:text-6xl text-[#FFFFFF] my-2 drop-shadow-sm">
+                  <span className="font-playball text-4xl md:text-6xl text-[#E3262F] [text-shadow:0_2px_12px_rgba(0,0,0,0.6)] my-2 drop-shadow-sm">
                     &
                   </span>
-                  <h1 className="font-playball text-[5.5rem] md:text-9xl text-[#FFFFFF] leading-none drop-shadow-sm">
+                  <h1 className="font-playball text-[5.5rem] md:text-9xl text-[#E3262F] [text-shadow:0_2px_12px_rgba(0,0,0,0.6)] leading-none drop-shadow-sm">
                     {INVITATION.couple.groom}
                   </h1>
                 </motion.div>
@@ -499,9 +499,9 @@ export default function HomecomingInvitation() {
                   transition={{ delay: 1, duration: 1 }}
                   className="mt-8 flex items-center justify-center w-full max-w-[200px]"
                 >
-                  <div className="h-px flex-1 bg-[#FFFFFF]/30" />
-                  <Heart className="w-4 h-4 text-[#FFFFFF] mx-4 shrink-0" fill="transparent" strokeWidth={1.5} />
-                  <div className="h-px flex-1 bg-[#FFFFFF]/30" />
+                  <div className="h-px flex-1 bg-[#E3262F]/50" />
+                  <Heart className="w-4 h-4 text-[#E3262F] mx-4 shrink-0" fill="transparent" strokeWidth={1.5} />
+                  <div className="h-px flex-1 bg-[#E3262F]/50" />
                 </motion.div>
 
 
@@ -512,7 +512,7 @@ export default function HomecomingInvitation() {
                   transition={{ delay: 1.6, duration: 1 }}
                   className="mt-8"
                 >
-                  <p className="text-[#FFFFFF] text-[9px] md:text-[10px] tracking-[0.2em] font-cinzel leading-[2.2] uppercase font-bold px-4">
+                  <p className="text-[#E3262F] [text-shadow:0_1px_6px_rgba(0,0,0,0.8)] text-[9px] md:text-[10px] tracking-[0.2em] font-cinzel leading-[2.2] uppercase font-bold px-4">
                     Together with our families,<br/>
                     we request the honour of your presence<br/>
                     at our homecoming ceremony.
@@ -562,110 +562,68 @@ export default function HomecomingInvitation() {
                   transition={{ duration: 1 }}
                   className="flex flex-col items-center w-full"
                 >
-                  <p className="font-cinzel text-[10px] md:text-[11px] tracking-[0.25em] uppercase font-bold text-[#FFFFFF]">
-                    Two Families Join Hands
+                  <p className="font-montserrat text-[10px] md:text-xs tracking-[0.3em] uppercase text-[#FFFFFF]">
+                    With the blessings of their families
                   </p>
-                  
+
                   {/* Ornament */}
-                  <div className="mt-4 mb-8">
+                  <div className="mt-4 mb-6">
                     <svg width="40" height="15" viewBox="0 0 120 30" fill="none" xmlns="http://www.w3.org/2000/svg">
                        <path d="M60 4L63 10L69 12L63 14L60 20L57 14L51 12L57 10L60 4Z" fill="#D4AF37" fillOpacity="0.6"/>
                     </svg>
                   </div>
 
-                  <p className="font-cinzel text-[12px] md:text-[13px] tracking-[0.25em] uppercase font-bold text-[#FFFFFF] mb-2">
-                    The Daughter Of
-                  </p>
-                  
-                  {/* Ornament with dot */}
-                  <div className="mb-4 flex flex-col items-center">
-                    <svg width="40" height="12" viewBox="0 0 120 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-                       <path d="M60 0L65 8L75 10L65 12L60 20L55 12L45 10L55 8L60 0Z" fill="#D4AF37"/>
-                       <path d="M30 10L50 10" stroke="#D4AF37" strokeWidth="1"/>
-                       <path d="M70 10L90 10" stroke="#D4AF37" strokeWidth="1"/>
-                    </svg>
-                    <div className="w-1.5 h-1.5 bg-[#D4AF37] rotate-45 mt-1 opacity-60"></div>
-                  </div>
-
-                  {/* Daughter Parents Box */}
-                  <div className="relative w-full max-w-sm mx-auto p-1 shadow-sm mb-6">
-                    <div className="absolute inset-0 bg-[#0A0A0A]/50 backdrop-blur-[2px] shadow-sm" style={{ clipPath: 'polygon(15px 0, calc(100% - 15px) 0, 100% 15px, 100% calc(100% - 15px), calc(100% - 15px) 100%, 15px 100%, 0 calc(100% - 15px), 0 15px)' }}></div>
-                    <div className="absolute inset-0 border border-[#D4AF37]/30" style={{ clipPath: 'polygon(15px 0, calc(100% - 15px) 0, 100% 15px, 100% calc(100% - 15px), calc(100% - 15px) 100%, 15px 100%, 0 calc(100% - 15px), 0 15px)' }}></div>
-                    <div className="absolute inset-1 border border-[#D4AF37]/20 pointer-events-none" style={{ clipPath: 'polygon(12px 0, calc(100% - 12px) 0, 100% 12px, 100% calc(100% - 12px), calc(100% - 12px) 100%, 12px 100%, 0 calc(100% - 12px), 0 12px)' }}></div>
-                    
-                    <div className="py-6 px-4 flex flex-col items-center justify-center text-[#FFFFFF] font-cinzel text-xs md:text-sm tracking-[0.1em] relative z-10 font-bold leading-relaxed">
-                      <span>{INVITATION.parents.bride}</span>
-                    </div>
-                  </div>
-
-                  {/* Together With Divider */}
-                  <div className="flex items-center justify-center w-full max-w-[260px] mx-auto mb-6 gap-3">
-                    <div className="h-px flex-1 bg-[#D4AF37]/40"></div>
-                    <span className="font-playball text-3xl md:text-4xl text-[#D4AF37] lowercase px-1 mt-1">together with</span>
-                    <div className="h-px flex-1 bg-[#D4AF37]/40"></div>
-                  </div>
-                  
-                  {/* Ornament */}
-                  <div className="mb-6">
-                    <svg width="40" height="15" viewBox="0 0 120 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-                       <path d="M60 4L63 10L69 12L63 14L60 20L57 14L51 12L57 10L60 4Z" fill="#D4AF37" fillOpacity="0.6"/>
-                    </svg>
-                  </div>
-
-                  <p className="font-cinzel text-[12px] md:text-[13px] tracking-[0.25em] uppercase font-bold text-[#FFFFFF] mb-2">
-                    The Son Of
-                  </p>
-                  
-                  {/* Ornament with dot */}
-                  <div className="mb-4 flex flex-col items-center">
-                    <svg width="40" height="12" viewBox="0 0 120 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-                       <path d="M60 0L65 8L75 10L65 12L60 20L55 12L45 10L55 8L60 0Z" fill="#D4AF37"/>
-                       <path d="M30 10L50 10" stroke="#D4AF37" strokeWidth="1"/>
-                       <path d="M70 10L90 10" stroke="#D4AF37" strokeWidth="1"/>
-                    </svg>
-                    <div className="w-1.5 h-1.5 bg-[#D4AF37] rotate-45 mt-1 opacity-60"></div>
-                  </div>
-
-                  {/* Son Parents Box */}
-                  <div className="relative w-full max-w-sm mx-auto p-1 shadow-sm mb-8">
-                    <div className="absolute inset-0 bg-[#0A0A0A]/50 backdrop-blur-[2px] shadow-sm" style={{ clipPath: 'polygon(15px 0, calc(100% - 15px) 0, 100% 15px, 100% calc(100% - 15px), calc(100% - 15px) 100%, 15px 100%, 0 calc(100% - 15px), 0 15px)' }}></div>
-                    <div className="absolute inset-0 border border-[#D4AF37]/30" style={{ clipPath: 'polygon(15px 0, calc(100% - 15px) 0, 100% 15px, 100% calc(100% - 15px), calc(100% - 15px) 100%, 15px 100%, 0 calc(100% - 15px), 0 15px)' }}></div>
-                    <div className="absolute inset-1 border border-[#D4AF37]/20 pointer-events-none" style={{ clipPath: 'polygon(12px 0, calc(100% - 12px) 0, 100% 12px, 100% calc(100% - 12px), calc(100% - 12px) 100%, 12px 100%, 0 calc(100% - 12px), 0 12px)' }}></div>
-                    
-                    <div className="py-5 px-4 flex flex-col items-center justify-center text-[#FFFFFF] font-cinzel text-xs md:text-sm tracking-[0.1em] relative z-10 font-bold leading-relaxed">
-                      <span>{INVITATION.parents.groom}</span>
-                    </div>
-                  </div>
-
-                  {/* Horizontal Divider Line */}
-                  <div className="w-full max-w-[280px] mx-auto h-px bg-[#D4AF37]/30 mb-8 flex items-center justify-center">
-                    <div className="w-2 h-2 bg-[#D4AF37] rotate-45 opacity-60"></div>
-                  </div>
-
-                  {/* Request Text */}
-                  <p className="text-[9px] md:text-[10px] tracking-[0.2em] uppercase leading-[2.5] max-w-[320px] mx-auto text-[#FFFFFF] font-cinzel font-bold">
-                    WITH HEARTS FULL OF LOVE, WE REQUEST<br/>
-                    THE HONOUR OF YOUR PRESENCE AS WE
-                  </p>
-                  
-                  {/* Celebrate */}
-                  <div className="py-2">
-                    <span className="font-playball text-4xl md:text-5xl text-[#D4AF37]">Celebrate</span>
-                  </div>
-
-                  <p className="text-[9px] md:text-[10px] tracking-[0.2em] uppercase leading-[2.5] max-w-[320px] mx-auto text-[#FFFFFF] font-cinzel font-bold mb-4">
-                    THE HOMECOMING CEREMONY OF
+                  {/* Bride */}
+                  <h2 className="font-cinzel text-5xl md:text-6xl text-[#FFFFFF] tracking-[0.05em] leading-none drop-shadow-sm">
+                    {INVITATION.couple.bride.toUpperCase()}
+                  </h2>
+                  <p className="font-cinzel text-[10px] md:text-xs tracking-[0.15em] uppercase text-[#FFFFFF]/90 mt-3">
+                    Daughter of {INVITATION.parents.bride}
                   </p>
 
-                  {/* Couple Names Inline */}
-                  <div className="flex items-center justify-center gap-6 mb-6">
-                    <span className="font-cinzel text-xl md:text-3xl text-[#FFFFFF] tracking-[0.2em] font-bold">{INVITATION.couple.bride.toUpperCase()}</span>
-                    <span className="font-playball text-4xl md:text-6xl text-[#D4AF37] mt-1">&</span>
-                    <span className="font-cinzel text-xl md:text-3xl text-[#FFFFFF] tracking-[0.2em] font-bold">{INVITATION.couple.groom.toUpperCase()}</span>
+                  {/* Ampersand */}
+                  <span className="font-playball text-6xl md:text-7xl text-[#D4AF37] leading-none my-3 drop-shadow-sm">&</span>
+
+                  {/* Groom */}
+                  <h2 className="font-cinzel text-5xl md:text-6xl text-[#FFFFFF] tracking-[0.05em] leading-none drop-shadow-sm">
+                    {INVITATION.couple.groom.toUpperCase()}
+                  </h2>
+                  <p className="font-cinzel text-[10px] md:text-xs tracking-[0.15em] uppercase text-[#FFFFFF]/90 mt-3">
+                    Son of {INVITATION.parents.groom}
+                  </p>
+
+                  {/* Celebration Text */}
+                  <p className="font-montserrat text-[11px] md:text-sm tracking-[0.25em] uppercase text-[#FFFFFF] mt-10">
+                    Are celebrating their homecoming
+                  </p>
+                  <p className="font-montserrat text-[11px] md:text-sm tracking-[0.25em] uppercase text-[#FFFFFF] mt-5">
+                    And would love the presence of
+                  </p>
+
+                  {/* Guest Name */}
+                  <div className="w-full max-w-sm mt-5">
+                    <p className="font-montserrat font-semibold text-lg md:text-xl text-[#D4AF37] tracking-wide pb-2">
+                      {guestName ? [guestPrefix && guestPrefix !== "Dear" ? guestPrefix : "", guestName].filter(Boolean).join(" ") : "You & Your Family"}
+                    </p>
+                    <div className="w-full border-b-2 border-dotted border-[#D4AF37]/70" />
                   </div>
+
+                  <p className="font-montserrat text-[11px] md:text-sm tracking-[0.25em] uppercase leading-[2] text-[#FFFFFF] mt-6">
+                    As they begin this beautiful<br />new chapter together.
+                  </p>
+
+                  {/* Date & Time */}
+                  <p className="font-montserrat text-[11px] md:text-sm tracking-[0.25em] uppercase text-[#FFFFFF] mt-6">
+                    {INVITATION.date.displayLong.split(" ").reverse().join(" ")} 2026 · {INVITATION.time.ceremony}
+                  </p>
+
+                  {/* Venue */}
+                  <p className="font-montserrat text-[11px] md:text-sm tracking-[0.25em] uppercase leading-[2] text-[#FFFFFF] mt-6">
+                    {INVITATION.venue.name}<br />{INVITATION.venue.city}
+                  </p>
 
                   {/* Bottom Ornament */}
-                  <div className="mt-2">
+                  <div className="mt-8">
                     <svg width="40" height="15" viewBox="0 0 120 30" fill="none" xmlns="http://www.w3.org/2000/svg">
                        <path d="M60 4L63 10L69 12L63 14L60 20L57 14L51 12L57 10L60 4Z" fill="#D4AF37" fillOpacity="0.6"/>
                        <path d="M20 12L45 12" stroke="#D4AF37" strokeOpacity="0.4" strokeWidth="1"/>
@@ -768,11 +726,11 @@ export default function HomecomingInvitation() {
             </section>
 
             {/* Countdown Section */}
-            <section className="relative py-28 md:py-48 flex flex-col items-center overflow-hidden bg-cover bg-center" style={{ backgroundImage: 'url("/bg.png")' }}>
+            <section className="relative py-28 md:py-48 flex flex-col items-center overflow-hidden bg-cover bg-center" style={{ backgroundImage: `url("${GALLERY_IMAGES[2]}")` }}>
               {/* Background Image */}
               
 
-              <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-[#111111]/40 via-[#1A1A1A]/10 to-[#111111]/40 pointer-events-none" />
+              <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-[#0A0A0A]/70 via-[#0A0A0A]/55 to-[#0A0A0A]/70 pointer-events-none" />
 
               {/* Floating Decorative Shapes */}
               <motion.div
@@ -849,47 +807,6 @@ export default function HomecomingInvitation() {
               </div>
             </section>
 
-
-            {/* Gallery Section */}
-            <section className="relative py-20 md:py-32 overflow-hidden flex flex-col items-center w-full bg-[#0A0A0A] bg-cover bg-center" style={{ backgroundImage: 'url("/bg.png")' }}>
-              <div className="container mx-auto px-6 max-w-5xl relative z-10 text-center">
-                <motion.div
-                  initial={{ opacity: 0, y: 18 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  className="flex flex-col items-center mb-12 md:mb-16"
-                >
-                  <p className="font-cinzel text-[#D4AF37] font-bold uppercase tracking-[0.6em] text-[10px] md:text-xs">
-                    Our Moments
-                  </p>
-                  <h2 className="font-playball text-6xl md:text-8xl text-[#D4AF37] leading-none mt-4 drop-shadow-[0_0_15px_rgba(212,175,55,0.2)]">
-                    Gallery
-                  </h2>
-                  <div className="w-full max-w-[200px] mx-auto h-px bg-gradient-to-r from-transparent via-[#D4AF37]/60 to-transparent mt-6" />
-                </motion.div>
-
-                <div className="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-6">
-                  {GALLERY_IMAGES.map((src, i) => (
-                    <motion.div
-                      key={src}
-                      initial={{ opacity: 0, y: 30 }}
-                      whileInView={{ opacity: 1, y: 0 }}
-                      viewport={{ once: true }}
-                      transition={{ duration: 0.8, delay: i * 0.15 }}
-                      className={`relative overflow-hidden rounded-2xl border border-[#D4AF37]/40 shadow-[0_0_30px_rgba(212,175,55,0.15)] group ${i === 0 ? "col-span-2 md:col-span-1 aspect-[4/5] md:aspect-[2/3]" : "aspect-[2/3]"}`}
-                    >
-                      <img
-                        src={src}
-                        alt={`${INVITATION.couple.bride} & ${INVITATION.couple.groom} ${i + 1}`}
-                        loading="lazy"
-                        className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
-                      />
-                      <div className="absolute inset-2 border border-[#D4AF37]/30 rounded-xl pointer-events-none" />
-                    </motion.div>
-                  ))}
-                </div>
-              </div>
-            </section>
 
             {/* Venue Location Section */}
             <section className="relative py-28 md:py-48 overflow-hidden bg-[#111111] bg-cover bg-center" style={{ backgroundImage: 'url("/bg.png")' }}>
@@ -1347,7 +1264,8 @@ export default function HomecomingInvitation() {
             </section>
 
             {/* Closing Section */}
-            <section className="relative py-32 md:py-48 overflow-hidden flex flex-col items-center w-full bg-[#0A0A0A] bg-cover bg-center" style={{ backgroundImage: 'url("/bg.png")' }}>
+            <section className="relative py-32 md:py-48 overflow-hidden flex flex-col items-center w-full bg-[#0A0A0A] bg-cover bg-center" style={{ backgroundImage: `url("${GALLERY_IMAGES[1]}")` }}>
+              <div className="absolute inset-0 bg-[#0A0A0A]/60 pointer-events-none" />
 
               {/* Starry/Magical Background adapting to light theme */}
               <div className="absolute inset-0 pointer-events-none opacity-40">

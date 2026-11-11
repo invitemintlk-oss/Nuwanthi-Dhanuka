@@ -23,7 +23,7 @@ ${generatedLink}
 Your presence would truly mean the world to us, and we would be honored to celebrate this beautiful moment together.
 
 With love,
-❤️ Suneth & Mihiri`;
+❤️ Nuwanthi & Dhanuka`;
 
   const copyLink = async () => {
     if (!generatedLink) return;
@@ -40,7 +40,7 @@ With love,
   };
 
   return (
-    <div className="min-h-screen bg-[#FDF8F5] p-6 md:p-12 font-sans text-[#3E2723]">
+    <div className="h-[100dvh] overflow-y-auto bg-[#FDF8F5] p-6 md:p-12 font-sans text-[#3E2723]">
       <div className="max-w-3xl mx-auto bg-white p-8 md:p-12 rounded-3xl shadow-xl border border-[#996515]/20">
         <h1 className="text-4xl text-center font-playball text-[#996515] mb-2">Homecoming Invitation</h1>
         <h2 className="text-xl text-center font-cinzel text-[#3E2723] mb-10 tracking-widest font-bold">Link Generator</h2>
@@ -56,6 +56,7 @@ With love,
               >
                 <option value="Mr.">Mr.</option>
                 <option value="Mrs.">Mrs.</option>
+                <option value="Ms.">Ms.</option>
                 <option value="Miss">Miss</option>
                 <option value="Mr. & Mrs.">Mr. & Mrs.</option>
                 <option value="Family">Family</option>
